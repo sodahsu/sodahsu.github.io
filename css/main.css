@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ===========================
 Index Of css
 ========================== */
@@ -19,6 +20,7 @@ body {
   color: #6e657e;
   overflow-x: hidden;
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
 p {
@@ -849,41 +851,27 @@ ol {
 
 /* Bread Crumbs */
 .breadcrumbs {
-  background-color: #081828;
+  background-color: #E8E8E8;
   position: relative;
-  padding: 100px 0;
-  padding-top: 180px;
+  padding: 20px 0;
+  padding-top: 100px;
 }
 
 .breadcrumbs .breadcrumbs-content {
   position: relative;
-  text-align: center;
 }
 
 .breadcrumbs .breadcrumbs-content p {
-  color: #fff;
+  color: #030047;
   font-size: 14px;
-  margin-top: 20px;
 }
 
 .breadcrumbs .breadcrumbs-content .page-title {
   font-size: 35px;
-  color: #fff;
-  font-weight: 500;
+  color: #030047;
+  font-weight: 700;
   position: relative;
-  padding-bottom: 22px;
   line-height: 50px;
-}
-
-.breadcrumbs .breadcrumbs-content .page-title:before {
-  position: absolute;
-  content: "";
-  left: 50%;
-  bottom: 0;
-  height: 2px;
-  width: 80px;
-  background: #030047;
-  margin-left: -40px;
 }
 
 .breadcrumbs .breadcrumbs-content .breadcrumb-nav {
@@ -1368,6 +1356,10 @@ ol {
 	Header CSS
 ========================================*/
 /*===== NAVBAR =====*/
+body {
+  font-weight: 300;
+}
+
 .navbar-area {
   width: 100%;
   z-index: 99;
@@ -1510,8 +1502,7 @@ ol {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1rem;
   color: #333;
   transition: all 0.3s ease-out 0s;
   padding: 30px 0;
@@ -1792,6 +1783,7 @@ ol {
 .header .button .btn {
   width: 150px;
   padding: 13px 10px;
+  font-size: 1rem;
 }
 
 .button .btn .dir-part {
@@ -2850,7 +2842,7 @@ ol {
 }
 
 .latest-news-area .single-news .content-body .title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 
@@ -3669,6 +3661,452 @@ blockquote span {
 }
 
 /*======================================
+    Works CSS 作品列表
+========================================*/
+.wsite-content ul {
+  line-height: 1.7;
+}
+
+.portfolio-section.section {
+  padding-bottom: 70px;
+}
+
+.portfolio-section .section-title {
+  padding: 0;
+}
+
+.portfolio-section .portfolio-btn-wrapper {
+  margin-bottom: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.portfolio-section .section-title {
+  margin-bottom: 0;
+}
+
+.portfolio-button-head {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.portfolio-section .portfolio-btn-wrapper button {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  color: #051441;
+  border-radius: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all .3s ease-out 0s;
+  background: 0 0;
+  border: 1px solid #eee;
+  border-radius: 30px;
+}
+
+.portfolio-section .portfolio-btn-wrapper button:hover {
+  background-color: #3763eb;
+  border-color: transparent;
+  color: #fff;
+}
+
+.portfolio-section .portfolio-btn-wrapper button.active {
+  background: #3763eb !important;
+  color: #fff;
+  border-color: transparent;
+}
+
+.portfolio-section .portfolio-btn-wrapper button:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-section .portfolio-btn-wrapper button {
+    margin-right: 10px;
+    padding: 7px 18px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-section .portfolio-btn-wrapper button {
+    margin-right: 10px;
+    padding: 7px 18px;
+    font-size: 16px;
+  }
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.portfolio-item-wrapper:hover .portfolio-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.portfolio-item-wrapper .portfolio-img {
+  overflow: hidden;
+  position: relative;
+  height: 235px;
+}
+
+.portfolio-item-wrapper .portfolio-img::before {
+  position: absolute;
+  content: "";
+  left: -50%;
+  top: -50%;
+  background-color: #fff;
+  height: 0%;
+  width: 0%;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0);
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all 0.7s ease;
+}
+
+.portfolio-item-wrapper:hover .portfolio-img::before {
+  opacity: .2;
+  transform: scale(1);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.portfolio-item-wrapper .portfolio-img::after {
+  position: absolute;
+  content: "";
+  right: -50%;
+  bottom: -50%;
+  background-color: #fff;
+  height: 0%;
+  width: 0%;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0);
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all 0.7s ease;
+}
+
+.portfolio-item-wrapper:hover .portfolio-img::after {
+  opacity: .2;
+  transform: scale(1);
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.portfolio-item-wrapper .portfolio-img img {
+  width: 100%;
+  transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transform: scale(1.1);
+}
+
+.portfolio-item-wrapper:hover .portfolio-img img {
+  transform: scale(1);
+}
+
+.portfolio-section .pf-content {
+  margin-top: 15px;
+}
+
+.portfolio-section .pf-content .category {
+  font-size: 1.125rem;
+  color: #000;
+  font-weight: 300;
+}
+
+.portfolio-section .pf-content h4 a {
+  color: #081828;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.portfolio-section .pf-content h4 a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.portfolio-details .top-head {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: #f6f9fc;
+}
+
+.portfolio-details .top-head .cat {
+  font-size: 14px;
+  color: #9b9ba7;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.portfolio-details .top-head h2 {
+  margin-bottom: 40px;
+  font-size: 35px;
+  line-height: 65px;
+  color: #081828;
+  font-weight: 700;
+  line-height: 55px;
+}
+
+.portfolio-details .top-head .meta-description li {
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.portfolio-details .top-head .meta-description li:last-child {
+  margin-right: 0;
+}
+
+.portfolio-details .top-head .meta-description li .small-title {
+  display: block;
+  color: #081828;
+  margin-bottom: 10px;
+}
+
+.portfolio-details .top-head .meta-description li p {
+  color: #9b9ba7;
+}
+
+.portfolio-details .top-head .meta-description li a {
+  color: #9b9ba7;
+}
+
+.portfolio-details .top-head .meta-description li a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-details .content {
+  padding: 100px 0;
+}
+
+.portfolio-details .content img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.portfolio-details .content h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #081828;
+  font-size: 26px;
+}
+
+.portfolio-details .content p {
+  margin: 30px 0;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.portfolio-details .content p:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-details .content .share-social {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.portfolio-details .content .share-social h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #081828;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .content .share-social ul li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.portfolio-details .content .share-social ul li:last-child {
+  margin: 0;
+}
+
+.portfolio-details .content .share-social ul li a {
+  color: #9b9ba7;
+  font-size: 17px;
+}
+
+.portfolio-details .content .share-social ul li a:hover {
+  color: #3763eb;
+}
+
+.portfolio-section services {
+  background-color: #fff;
+  position: relative;
+}
+
+.portfolio-section services_dec_1 {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 0;
+}
+
+.portfolio-section services_dec_1 img {
+  width: 200px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-section services_dec_1 {
+    display: none;
+  }
+}
+
+.portfolio-section services_dec_2 {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  z-index: 0;
+  transform: rotate(180deg);
+}
+
+.portfolio-section services_dec_2 img {
+  width: 200px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-section services_dec_2 {
+    display: none;
+  }
+}
+
+#list-example {
+  top: 90px;
+}
+
+.wsite-list figure {
+  flex-basis: 33.3%;
+}
+
+.marketing {
+  padding: 20px;
+}
+
+.wsite-content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #030047;
+}
+
+.wsite-content h4 {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.wsite-content p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.wsite-content ul {
+  padding-left: 30px;
+}
+
+.wsite-content li {
+  list-style-type: disc;
+  font-size: 1.25rem;
+}
+
+.wsite-content-col {
+  margin-bottom: 30px;
+}
+
+.wsite-content-box {
+  margin: 25px 0;
+}
+
+.wsite-3Q {
+  margin: 40px 0;
+}
+
+.next-page {
+  position: relative;
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+}
+
+.next-page:hover {
+  transition: all .3s ease-in;
+  background-color: #FED501;
+  transform: translate3d(0, -5px, 0);
+}
+
+.next-page h3 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+.next-page p {
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.next-page i {
+  font-size: 40px;
+  margin: 0 10px;
+  color: #030047;
+}
+
+.next-page:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 120px;
+  background-color: #030047;
+}
+
+.next-left:before {
+  left: 0;
+}
+
+.next-right {
+  flex-direction: row-reverse;
+}
+
+.next-right i {
+  transform: rotate(180deg);
+}
+
+.next-right::before {
+  right: 0;
+}
+
+.postPhoto img {
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 0;
+  max-height: 400px;
+}
+
+/*======================================
     Brand CSS
 ========================================*/
 .brand-area .section-title {
@@ -3961,6 +4399,15 @@ blockquote span {
   .navbar-brand img {
     width: 130px;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand img {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .header.index2 .navbar .navbar-nav .nav-item a {
     color: #081828;
   }
