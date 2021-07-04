@@ -97,13 +97,47 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         //========= glightbox
-        GLightbox({
-            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
+            var lightbox = GLightbox();
+            lightbox.on('open', (target) => {
+                console.log('lightbox opened');
+            });
+            var lightboxDescription = GLightbox({
+                selector: '.glightbox2'
+            });
+            var lightboxVideo = GLightbox({
+                selector: '.glightbox3'
+            });
+            lightboxVideo.on('slide_changed', ({ prev, current }) => {
+                console.log('Prev slide', prev);
+                console.log('Current slide', current);
+
+                const { slideIndex, slideNode, slideConfig, player } = current;
+
+                if (player) {
+                    if (!player.ready) {
+                        // If player is not ready
+                        player.on('ready', (event) => {
+                            // Do something when video is ready
+                        });
+                    }
+
+                    player.on('play', (event) => {
+                        console.log('Started play');
+                    });
+
+                    player.on('volumechange', (event) => {
+                        console.log('Volume change');
+                    });
+
+                    player.on('ended', (event) => {
+                        console.log('Video ended');
+                    });
+                }
+            });
+
+            var lightboxInlineIframe = GLightbox({
+                selector: '.glightbox4'
+            });
     </script>
 </body>
 
