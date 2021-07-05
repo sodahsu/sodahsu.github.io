@@ -850,15 +850,12 @@ ol {
 
 /* Bread Crumbs */
 .breadcrumbs {
-  background-color: #E8E8E8;
   position: relative;
   padding: 20px 0;
-  padding-top: 85px;
 }
 
 .breadcrumbs .breadcrumbs-content {
   position: relative;
-  padding: 20px;
 }
 
 .breadcrumbs .breadcrumbs-content p {
@@ -883,7 +880,6 @@ ol {
 }
 
 .breadcrumbs .breadcrumb-nav {
-  text-align: center;
   margin-top: 50px;
 }
 
@@ -893,7 +889,7 @@ ol {
 
 .breadcrumbs .breadcrumb-nav li,
 .breadcrumbs .breadcrumb-nav li a {
-  color: #fff;
+  color: #030047;
   font-size: 14px;
   font-weight: 500;
 }
@@ -912,7 +908,7 @@ ol {
   content: '';
   height: 80%;
   width: 2px;
-  background-color: #fff;
+  background-color: #030047;
   position: absolute;
   top: 2px;
   right: 0;
@@ -4806,7 +4802,7 @@ blockquote span {
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
   .section {
-    padding: 50px 0px;
+    padding: 0px;
   }
   .section-title {
     margin-bottom: 40px;
@@ -4830,10 +4826,6 @@ blockquote span {
   }
   .section-title p {
     font-size: 13px;
-  }
-  .breadcrumbs {
-    padding-top: 105px;
-    padding-bottom: 50px;
   }
   .breadcrumbs .breadcrumbs-content .page-title {
     font-size: 30px;
