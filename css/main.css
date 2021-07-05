@@ -19,7 +19,6 @@ body {
   font-style: normal;
   color: #6e657e;
   overflow-x: hidden;
-  font-size: 14px;
   letter-spacing: 1px;
 }
 
@@ -854,11 +853,12 @@ ol {
   background-color: #E8E8E8;
   position: relative;
   padding: 20px 0;
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 .breadcrumbs .breadcrumbs-content {
   position: relative;
+  padding: 20px;
 }
 
 .breadcrumbs .breadcrumbs-content p {
@@ -1119,7 +1119,6 @@ ol {
 .button .btn {
   display: inline-block;
   text-transform: capitalize;
-  font-size: .9375rem;
   font-weight: 400;
   padding: 15px 30px;
   background-color: #030047;
@@ -1358,6 +1357,13 @@ ol {
 /*===== NAVBAR =====*/
 body {
   font-weight: 300;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: .875rem;
+  }
 }
 
 .navbar-area {
@@ -1427,6 +1433,14 @@ body {
   padding: 0;
   color: #081828;
   font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    display: block;
+    font-size: 0;
+    text-align: center;
+  }
 }
 
 .navbar-brand:hover {
@@ -1502,8 +1516,8 @@ body {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.25rem;
+  color: #030047;
   transition: all 0.3s ease-out 0s;
   padding: 30px 0;
   position: relative;
@@ -1669,6 +1683,13 @@ body {
 
 .header {
   position: relative;
+  min-height: 90px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    min-height: 70px;
+  }
 }
 
 /* Header Button */
@@ -1715,7 +1736,7 @@ body {
   opacity: 0;
   visibility: hidden;
   padding: 15px;
-  left: 0;
+  right: 0;
   margin: 0;
   box-shadow: 0px 13px 20px rgba(153, 153, 153, 0.06);
   transition: all 0.3s ease 0s;
@@ -3882,7 +3903,7 @@ blockquote span {
 }
 
 .portfolio-details .top-head .meta-description li p {
-  color: #9b9ba7;
+  color: #030047;
 }
 
 .portfolio-details .top-head .meta-description li a {
@@ -4006,13 +4027,13 @@ blockquote span {
 
 .wsite-content h2 {
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #030047;
 }
 
 .wsite-content h4 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 10px 0;
 }
 
@@ -4027,7 +4048,6 @@ blockquote span {
 
 .wsite-content li {
   list-style-type: disc;
-  font-size: 1.25rem;
 }
 
 .wsite-content-col {
@@ -4035,7 +4055,39 @@ blockquote span {
 }
 
 .wsite-content-box {
-  margin: 25px 0;
+  margin: 50px 0;
+}
+
+.wsite-content-box .list-group {
+  font-weight: 400;
+  padding: 0;
+}
+
+.wsite-content-box .list-group .link-dark {
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+
+.wsite-content-box .list-group li {
+  list-style-type: none;
+  color: #030047;
+}
+
+.wsite-content-box .item {
+  margin: 30px 0;
+}
+
+.wsite-content-box figure {
+  overflow: hidden;
+  position: relative;
+  height: 170px;
+}
+
+.wsite-content-box figure img {
+  width: 100%;
+  transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transform: scale(1.1);
 }
 
 .wsite-3Q {
@@ -4059,6 +4111,12 @@ blockquote span {
 .next-page h3 {
   font-size: 2.25rem;
   margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .next-page h3 {
+    font-size: inherit;
+  }
 }
 
 .next-page p {
@@ -4129,7 +4187,6 @@ blockquote span {
 .brand-list::before {
   position: absolute;
   content: "";
-  background: #eee;
   width: 100%;
   height: 1px;
   top: 50%;
@@ -4142,8 +4199,8 @@ blockquote span {
 .brand-list li {
   display: block;
   text-align: center;
-  height: 150px;
-  line-height: 150px;
+  height: 88px;
+  line-height: 88px;
 }
 
 .brand-list li:hover {
@@ -4781,7 +4838,6 @@ blockquote span {
   .breadcrumbs .breadcrumbs-content .page-title {
     font-size: 30px;
     margin-bottom: 5px;
-    color: #fff;
   }
   .button .btn {
     padding: 12px 25px;
