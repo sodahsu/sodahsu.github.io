@@ -4034,7 +4034,7 @@ blockquote span {
 }
 
 .wsite-content p {
-  font-size: 1.25rem;
+  font-size: .9375rem;
   font-weight: 300;
 }
 
@@ -4051,7 +4051,7 @@ blockquote span {
 }
 
 .wsite-content-box {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .wsite-content-box .list-group {
@@ -4061,7 +4061,7 @@ blockquote span {
 
 .wsite-content-box .list-group .link-dark {
   text-decoration: underline;
-  font-size: 1.25rem;
+  font-size: .9375rem;
 }
 
 .wsite-content-box .list-group li {
@@ -4071,6 +4071,7 @@ blockquote span {
 
 .wsite-content-box .item {
   margin: 30px 0;
+  line-height: 1.8;
 }
 
 .wsite-content-box figure {
@@ -4084,6 +4085,10 @@ blockquote span {
   transition: all .4s ease;
   -moz-transition: all .4s ease;
   transform: scale(1.1);
+}
+
+.wsite-content-item {
+  margin: 30px 0;
 }
 
 .wsite-3Q {
