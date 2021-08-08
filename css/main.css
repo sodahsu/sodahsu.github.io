@@ -915,8 +915,8 @@ ol {
 }
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -1352,8 +1352,9 @@ ol {
 ========================================*/
 /*===== NAVBAR =====*/
 body {
-  font-weight: 300;
   font-size: 1rem;
+  line-height: 1.8;
+  color: #030047;
 }
 
 @media (max-width: 767px) {
@@ -2173,6 +2174,8 @@ body {
   background-color: #FED501 !important;
   font-weight: 700;
   color: #030047 !important;
+  position: relative;
+  z-index: 2;
 }
 
 /*======================================
@@ -2795,6 +2798,12 @@ body {
   margin: 0px 0px 6.25rem 0;
 }
 
+@media (max-width: 767px) {
+  .latest-news-area .single-news {
+    margin: 0px 0px 1.875rem 0;
+  }
+}
+
 .latest-news-area .single-news .image {
   position: relative;
   border-radius: 4px;
@@ -2843,7 +2852,7 @@ body {
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
   position: absolute;
-  padding: 40px;
+  padding: 20px;
   top: 15%;
   right: -10%;
   max-width: 480px;
@@ -2888,7 +2897,6 @@ body {
 }
 
 .latest-news-area .single-news .content-body p {
-  font-size: 1.125rem;
   margin-bottom: 20px;
   font-weight: 200;
 }
@@ -3680,10 +3688,6 @@ blockquote span {
 /*======================================
     Works CSS 作品列表
 ========================================*/
-.wsite-content ul {
-  line-height: 1.7;
-}
-
 .portfolio-section.section {
   padding-bottom: 70px;
 }
@@ -3773,7 +3777,7 @@ blockquote span {
 .portfolio-item-wrapper .portfolio-img {
   overflow: hidden;
   position: relative;
-  height: 235px;
+  height: 230px;
 }
 
 .portfolio-item-wrapper .portfolio-img::before {
@@ -3842,19 +3846,17 @@ blockquote span {
 }
 
 .portfolio-section .pf-content .category {
-  font-size: 1.125rem;
+  font-size: .9375rem;
   color: #000;
   font-weight: 300;
 }
 
-.portfolio-section .pf-content h4 a {
-  color: #081828;
-  font-size: 1.5rem;
+.portfolio-section .pf-content h4 {
+  font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 
-.portfolio-section .pf-content h4 a:hover {
+.portfolio-section .pf-content h4:hover {
   color: inherit;
   text-decoration: underline;
 }
@@ -4017,13 +4019,18 @@ blockquote span {
   flex-basis: 33.3%;
 }
 
+.wsite-section-wrap figure {
+  height: 300px;
+  overflow: hidden;
+}
+
 .marketing {
   padding: 20px;
 }
 
 .wsite-content h2 {
-  margin-bottom: 20px;
-  font-size: 1.875rem;
+  margin-bottom: 10px;
+  font-size: 1.75rem;
   color: #030047;
 }
 
@@ -4035,7 +4042,11 @@ blockquote span {
 
 .wsite-content p {
   font-size: .9375rem;
-  font-weight: 300;
+  padding: 5px 0;
+}
+
+.wsite-content p a {
+  color: initial;
 }
 
 .wsite-content ul {
@@ -4051,7 +4062,9 @@ blockquote span {
 }
 
 .wsite-content-box {
-  margin: 30px 0;
+  margin: 20px 0;
+  font-size: .9375rem;
+  line-height: 1.8;
 }
 
 .wsite-content-box .list-group {
@@ -4163,6 +4176,10 @@ blockquote span {
      object-fit: cover;
   border: 0;
   max-height: 400px;
+}
+
+.skill-badge .badge {
+  font-size: .8125rem !important;
 }
 
 /*======================================
@@ -4907,7 +4924,7 @@ blockquote span {
   }
   .hero-area .hero-text {
     float: none;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .hero-area .hero-text h1 {
     font-size: 23px;
