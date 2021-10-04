@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>產地到餐桌的半透明之路介紹- SodaHsu | UI/UX 設計師</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Hello，I'm Soda！一個專注在服務與體驗上的設計
+    從商業價值思考每件事，重視事情的脈絡與證據。
+    “擁抱改變，並隨機應變”" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
     <!-- Place favicon.ico in the root directory -->
@@ -258,50 +260,50 @@
     <div class="row mb-4">
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e01.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e01.jpg" class="glightbox" data-glightbox="title:ERP-APP完成介面; description: 以功能分級為主">
             <img src="images/works/pic/e01.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">APP完成介面</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e02.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e02.jpg" class="glightbox" data-glightbox="title:ERP-後台介面; description: 以方便打單為核心">
             <img src="images/works/pic/e02.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">ERP-後台介面</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e03.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e03.jpg" class="glightbox" data-glightbox="title:ERP-後台介面; description: 可視性與操作">
             <img src="images/works/pic/e03.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">ERP-後台介面</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e04.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e04.jpg" class="glightbox" data-glightbox="title:實際使用圖; description: 用戶">
             <img src="images/works/pic/e04.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">實際使用圖</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e07.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e07.jpg" class="glightbox" data-glightbox="title:ERP-前期討論; description: 手稿文件">
             <img src="images/works/pic/e07.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">ERP-前期討論</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/e06.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/e06.jpg" class="glightbox" data-glightbox="title:ERP-前期討論; description: 手稿文件">
             <img src="images/works/pic/e06.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">ERP-前期討論</figcaption>
         </figure>
       </div>
     </div>
@@ -409,47 +411,55 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         //========= glightbox
-            var lightbox = GLightbox();
-            lightbox.on('open', (target) => {
-                console.log('lightbox opened');
-            });
-            var lightboxDescription = GLightbox({
-                selector: '.glightbox2'
-            });
-            var lightboxVideo = GLightbox({
-                selector: '.glightbox3'
-            });
-            lightboxVideo.on('slide_changed', ({ prev, current }) => {
-                console.log('Prev slide', prev);
-                console.log('Current slide', current);
+        var lightbox = GLightbox();
+        lightbox.on('open', (target) => {
+            console.log('lightbox opened');
+        });
+        var lightboxDescription = GLightbox({
+            selector: '.glightbox2'
+        });
+        var lightboxVideo = GLightbox({
+            selector: '.glightbox3'
+        });
+        lightboxVideo.on('slide_changed', ({
+            prev,
+            current
+        }) => {
+            console.log('Prev slide', prev);
+            console.log('Current slide', current);
 
-                const { slideIndex, slideNode, slideConfig, player } = current;
+            const {
+                slideIndex,
+                slideNode,
+                slideConfig,
+                player
+            } = current;
 
-                if (player) {
-                    if (!player.ready) {
-                        // If player is not ready
-                        player.on('ready', (event) => {
-                            // Do something when video is ready
-                        });
-                    }
-
-                    player.on('play', (event) => {
-                        console.log('Started play');
-                    });
-
-                    player.on('volumechange', (event) => {
-                        console.log('Volume change');
-                    });
-
-                    player.on('ended', (event) => {
-                        console.log('Video ended');
+            if (player) {
+                if (!player.ready) {
+                    // If player is not ready
+                    player.on('ready', (event) => {
+                        // Do something when video is ready
                     });
                 }
-            });
 
-            var lightboxInlineIframe = GLightbox({
-                selector: '.glightbox4'
-            });
+                player.on('play', (event) => {
+                    console.log('Started play');
+                });
+
+                player.on('volumechange', (event) => {
+                    console.log('Volume change');
+                });
+
+                player.on('ended', (event) => {
+                    console.log('Video ended');
+                });
+            }
+        });
+
+        var lightboxInlineIframe = GLightbox({
+            selector: '.glightbox4'
+        });
     </script>
 </body>
 

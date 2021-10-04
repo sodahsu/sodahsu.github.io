@@ -1513,10 +1513,10 @@ body {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #030047;
   transition: all 0.3s ease-out 0s;
-  padding: 30px 0;
+  padding: 20px 0;
   position: relative;
   text-transform: capitalize;
 }
@@ -4019,11 +4019,6 @@ blockquote span {
   flex-basis: 33.3%;
 }
 
-.wsite-section-wrap figure {
-  height: 300px;
-  overflow: hidden;
-}
-
 .marketing {
   padding: 20px;
 }
@@ -4043,10 +4038,6 @@ blockquote span {
 .wsite-content p {
   font-size: .9375rem;
   padding: 5px 0;
-}
-
-.wsite-content p a {
-  color: initial;
 }
 
 .wsite-content ul {
@@ -4116,6 +4107,12 @@ blockquote span {
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .next-page {
+    margin-bottom: 10px;
+  }
+}
+
 .next-page:hover {
   transition: all .3s ease-in;
   background-color: #FED501;
@@ -4125,17 +4122,37 @@ blockquote span {
 .next-page h3 {
   font-size: 2.25rem;
   margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .next-page h3 {
+    font-size: 1.375rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .next-page h3 {
+    font-size: 1.375rem;
+  }
 }
 
 @media (max-width: 767px) {
   .next-page h3 {
-    font-size: inherit;
+    font-size: 1.125rem;
   }
 }
 
 .next-page p {
   font-size: 1.125rem;
   color: #000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .next-page i {
@@ -4522,11 +4539,10 @@ blockquote span {
   }
   .header .navbar-nav li a {
     position: relative;
-    margin-bottom: 6px;
+    margin-bottom: 25px;
+    display: block;
   }
   .navbar-collapse {
-    overflow: scroll;
-    height: 400px;
     transition: all 0.4s ease;
   }
   .navbar-nav .nav-item:last-child {

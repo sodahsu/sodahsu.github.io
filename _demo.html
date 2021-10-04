@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>空白框架- SodaHsu | UI/UX 設計師</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Hello，I'm Soda！一個專注在服務與體驗上的設計
+    從商業價值思考每件事，重視事情的脈絡與證據。
+    “擁抱改變，並隨機應變”" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
     <!-- Place favicon.ico in the root directory -->
@@ -170,47 +172,55 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         //========= glightbox
-            var lightbox = GLightbox();
-            lightbox.on('open', (target) => {
-                console.log('lightbox opened');
-            });
-            var lightboxDescription = GLightbox({
-                selector: '.glightbox2'
-            });
-            var lightboxVideo = GLightbox({
-                selector: '.glightbox3'
-            });
-            lightboxVideo.on('slide_changed', ({ prev, current }) => {
-                console.log('Prev slide', prev);
-                console.log('Current slide', current);
+        var lightbox = GLightbox();
+        lightbox.on('open', (target) => {
+            console.log('lightbox opened');
+        });
+        var lightboxDescription = GLightbox({
+            selector: '.glightbox2'
+        });
+        var lightboxVideo = GLightbox({
+            selector: '.glightbox3'
+        });
+        lightboxVideo.on('slide_changed', ({
+            prev,
+            current
+        }) => {
+            console.log('Prev slide', prev);
+            console.log('Current slide', current);
 
-                const { slideIndex, slideNode, slideConfig, player } = current;
+            const {
+                slideIndex,
+                slideNode,
+                slideConfig,
+                player
+            } = current;
 
-                if (player) {
-                    if (!player.ready) {
-                        // If player is not ready
-                        player.on('ready', (event) => {
-                            // Do something when video is ready
-                        });
-                    }
-
-                    player.on('play', (event) => {
-                        console.log('Started play');
-                    });
-
-                    player.on('volumechange', (event) => {
-                        console.log('Volume change');
-                    });
-
-                    player.on('ended', (event) => {
-                        console.log('Video ended');
+            if (player) {
+                if (!player.ready) {
+                    // If player is not ready
+                    player.on('ready', (event) => {
+                        // Do something when video is ready
                     });
                 }
-            });
 
-            var lightboxInlineIframe = GLightbox({
-                selector: '.glightbox4'
-            });
+                player.on('play', (event) => {
+                    console.log('Started play');
+                });
+
+                player.on('volumechange', (event) => {
+                    console.log('Volume change');
+                });
+
+                player.on('ended', (event) => {
+                    console.log('Video ended');
+                });
+            }
+        });
+
+        var lightboxInlineIframe = GLightbox({
+            selector: '.glightbox4'
+        });
     </script>
 </body>
 

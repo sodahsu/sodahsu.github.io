@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>首頁- SodaHsu | UI/UX 設計師</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Hello，I'm Soda！一個專注在服務與體驗上的設計
+    從商業價值思考每件事，重視事情的脈絡與證據。
+    “擁抱改變，並隨機應變”" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
     <!-- Place favicon.ico in the root directory -->
@@ -131,9 +133,9 @@
                     <div class="home-slider">
                         <div class="hero-text">
                             <h1 class="wow fadeInUp" data-wow-delay=".3">Hello，I'm Soda！</h1>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">一個專注在服務與體驗上的設計<br>從<span
-                                    class="text-zigzag">商業價值</span>思考每件事，重視事情的脈絡與證據。</p>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">“擁抱改變，並隨機應變”</p>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">一個專注在服務設計與用戶體驗上的UIUX設計師。從<span
+                                    class="text-zigzag">商業價值</span>思考每件事，重視流程脈絡與數據驗證。</p>
+                            <!-- <p class="wow fadeInUp" data-wow-delay=".5s">“擁抱改變，並隨機應變”</p> -->
                             <div class="button wow fadeInUp" data-wow-delay=".7s">
                                 <a href="about.html" class="btn btn_a">關於我</a>
                                 <a href="https://www.cakeresume.com/me/piscean0619" class="btn" target="_blank">下載履歷</a>
@@ -173,16 +175,17 @@
                         <!-- Single News -->
                         <div class="single-news wow fadeInUp" data-wow-delay=".2s">
                             <div class="image">
-                                <img class="thumb"
-                                    src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                                    alt="#">
+                                <a href="page_01.html"> <img class="thumb"
+                                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                        alt="#"></a>
+
                                 <!-- <div class="meta-details">
                                     <img src="images/blog/author.jpg" alt="#"> <span>BY TIM NORTON</span>
                                 </div> -->
                             </div>
                             <div class="content-body wow fadeInUp" data-wow-delay=".4s">
                                 <span class="time">2017/1-2020/1</span>
-                                <h4 class="title"><a href="page_01.html">產地到餐桌的半透明之路</a></h4>
+                                <h4 class="title">產地到餐桌的半透明之路</h4>
                                 <p>重新設計專屬農業特殊性的ERP管理系統，
                                     同時重新整理系統架構增加未來產品擴展彈性。
                                 </p>
@@ -206,13 +209,15 @@
                         <!-- Single News -->
                         <div class="single-news wow fadeInUp" data-wow-delay=".2s">
                             <div class="image">
-                                <img class="thumb"
+                                <a href="page_02.html">
+                                    <img class="thumb"
                                     src="https://images.unsplash.com/photo-1583231474295-72a6600bcf04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80"
                                     alt="#">
+                                </a>
                             </div>
                             <div class="content-body wow fadeInUp" data-wow-delay=".4s">
                                 <span class="time">2018-2021</span>
-                                <h4 class="title"><a href="page_02.html">農業也要潮大數據</a></h4>
+                                <h4 class="title">農業也要潮大數據</h4>
                                 <p>已於2021正式發布產品，配合硬體智耕雲銷售至多個示範點與導入三個以上企業，
                                     更延伸系列服務至稻米與漁業等</p>
                                 <div class="badge_g">
@@ -344,47 +349,55 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         //========= glightbox
-            var lightbox = GLightbox();
-            lightbox.on('open', (target) => {
-                console.log('lightbox opened');
-            });
-            var lightboxDescription = GLightbox({
-                selector: '.glightbox2'
-            });
-            var lightboxVideo = GLightbox({
-                selector: '.glightbox3'
-            });
-            lightboxVideo.on('slide_changed', ({ prev, current }) => {
-                console.log('Prev slide', prev);
-                console.log('Current slide', current);
+        var lightbox = GLightbox();
+        lightbox.on('open', (target) => {
+            console.log('lightbox opened');
+        });
+        var lightboxDescription = GLightbox({
+            selector: '.glightbox2'
+        });
+        var lightboxVideo = GLightbox({
+            selector: '.glightbox3'
+        });
+        lightboxVideo.on('slide_changed', ({
+            prev,
+            current
+        }) => {
+            console.log('Prev slide', prev);
+            console.log('Current slide', current);
 
-                const { slideIndex, slideNode, slideConfig, player } = current;
+            const {
+                slideIndex,
+                slideNode,
+                slideConfig,
+                player
+            } = current;
 
-                if (player) {
-                    if (!player.ready) {
-                        // If player is not ready
-                        player.on('ready', (event) => {
-                            // Do something when video is ready
-                        });
-                    }
-
-                    player.on('play', (event) => {
-                        console.log('Started play');
-                    });
-
-                    player.on('volumechange', (event) => {
-                        console.log('Volume change');
-                    });
-
-                    player.on('ended', (event) => {
-                        console.log('Video ended');
+            if (player) {
+                if (!player.ready) {
+                    // If player is not ready
+                    player.on('ready', (event) => {
+                        // Do something when video is ready
                     });
                 }
-            });
 
-            var lightboxInlineIframe = GLightbox({
-                selector: '.glightbox4'
-            });
+                player.on('play', (event) => {
+                    console.log('Started play');
+                });
+
+                player.on('volumechange', (event) => {
+                    console.log('Volume change');
+                });
+
+                player.on('ended', (event) => {
+                    console.log('Video ended');
+                });
+            }
+        });
+
+        var lightboxInlineIframe = GLightbox({
+            selector: '.glightbox4'
+        });
     </script>
 </body>
 
