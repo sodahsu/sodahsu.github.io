@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>你抽到農遊券了嗎?- SodaHsu | UI/UX 設計師</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Hello，I'm Soda！一個專注在服務與體驗上的設計
+    從商業價值思考每件事，重視事情的脈絡與證據。
+    “擁抱改變，並隨機應變”" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
     <!-- Place favicon.ico in the root directory -->
@@ -246,7 +248,7 @@
           </div>
           <div class="wsite-content-item">
             <h6 class="mb-2">04 設計原則</h6>
-            <p>原則以易用和快速為核心,並獲得小黑（行銷KOL）發文認可介面易用良好<br>
+            <p>原則以易用和快速為核心,並獲得<a href="https://www.facebook.com/backtrue" target="_blank">小黑（行銷KOL）</a>發文認可介面易用良好<br>
               針對負載過高，提出以地圖和列表顯示等分流操作降低存取
             </p>
           </div>
@@ -259,26 +261,26 @@
     <div class="row mb-4">
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/c01.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/c01.jpg" class="glightbox" data-glightbox="title:商家操作的APP介面; description: 方便掃描/報帳">
             <img src="images/works/pic/c01.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">APP介面</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/c02.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/c02.jpg" class="glightbox" data-glightbox="title:農遊卷主視覺; description: web/app">
             <img src="images/works/pic/c02.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">農遊卷主視覺</figcaption>
         </figure>
       </div>
       <div class="col-lg-4 col-md-6 col-12">
         <figure class="figure">
-          <a href="images/works/pic/c04.jpg" class="glightbox" data-glightbox="title:圖片標題; description: 說明文字">
+          <a href="images/works/pic/c04.jpg" class="glightbox" data-glightbox="title:小黑（行銷KOL）; description: 認可農遊卷操作介面">
             <img src="images/works/pic/c04.jpg" alt="image" class="figure-img img-fluid rounded">
           </a>
-          <figcaption class="figure-caption text-end">標題</figcaption>
+          <figcaption class="figure-caption text-end">認可農遊卷操作介面</figcaption>
         </figure>
       </div>
     </div>
@@ -293,8 +295,7 @@
           針對當時出了很多懶人包，卻發現使用者其實不會看（沒有關注關鍵字）。<br>
           
           在面向不同用戶與期待操作的便利性上可以再有進度的空間。
-          
-          改善的點就是如何降低客服進線量，也許就是不要採驗證碼取票</p>
+          </p>
       </div>
       <div class="wsite-content-box">
         <h2 class="wsite-content-title">相關連結</h2>
@@ -389,47 +390,55 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         //========= glightbox
-            var lightbox = GLightbox();
-            lightbox.on('open', (target) => {
-                console.log('lightbox opened');
-            });
-            var lightboxDescription = GLightbox({
-                selector: '.glightbox2'
-            });
-            var lightboxVideo = GLightbox({
-                selector: '.glightbox3'
-            });
-            lightboxVideo.on('slide_changed', ({ prev, current }) => {
-                console.log('Prev slide', prev);
-                console.log('Current slide', current);
+        var lightbox = GLightbox();
+        lightbox.on('open', (target) => {
+            console.log('lightbox opened');
+        });
+        var lightboxDescription = GLightbox({
+            selector: '.glightbox2'
+        });
+        var lightboxVideo = GLightbox({
+            selector: '.glightbox3'
+        });
+        lightboxVideo.on('slide_changed', ({
+            prev,
+            current
+        }) => {
+            console.log('Prev slide', prev);
+            console.log('Current slide', current);
 
-                const { slideIndex, slideNode, slideConfig, player } = current;
+            const {
+                slideIndex,
+                slideNode,
+                slideConfig,
+                player
+            } = current;
 
-                if (player) {
-                    if (!player.ready) {
-                        // If player is not ready
-                        player.on('ready', (event) => {
-                            // Do something when video is ready
-                        });
-                    }
-
-                    player.on('play', (event) => {
-                        console.log('Started play');
-                    });
-
-                    player.on('volumechange', (event) => {
-                        console.log('Volume change');
-                    });
-
-                    player.on('ended', (event) => {
-                        console.log('Video ended');
+            if (player) {
+                if (!player.ready) {
+                    // If player is not ready
+                    player.on('ready', (event) => {
+                        // Do something when video is ready
                     });
                 }
-            });
 
-            var lightboxInlineIframe = GLightbox({
-                selector: '.glightbox4'
-            });
+                player.on('play', (event) => {
+                    console.log('Started play');
+                });
+
+                player.on('volumechange', (event) => {
+                    console.log('Volume change');
+                });
+
+                player.on('ended', (event) => {
+                    console.log('Video ended');
+                });
+            }
+        });
+
+        var lightboxInlineIframe = GLightbox({
+            selector: '.glightbox4'
+        });
     </script>
 </body>
 

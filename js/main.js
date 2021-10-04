@@ -7,7 +7,7 @@ Author: GrayGrids
     //===== Prealoder
 
     window.onload = function () {
-        window.setTimeout(fadeout, 500);
+        window.setTimeout(fadeout, 200);
     }
 
     function fadeout() {
@@ -103,3 +103,4 @@ Author: GrayGrids
     });
     cu.start();
 })();
+
